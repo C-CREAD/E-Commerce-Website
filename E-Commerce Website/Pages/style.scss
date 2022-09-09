@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    align-items: center;
+}
+
+h1 {
+  margin-left: 10px;
+  font-weight: 800;
+  font-style: normal;
+  font-family: 'Epilogue', sans-serif;
+  color:#000000;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+}
+
+p {
+  font-weight: 200;
+  font-style: normal;
+  font-family: 'Epilogue', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+a {
+  font-weight: 200;
+  font-style: normal;
+  font-family: 'Epilogue', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.container {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+}
+.container-2{
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  text-align: center;
+}
+.logo{
+  margin-left: auto;
+}
+.logo-2{
+  margin-left: auto;
+  max-width: 150px;
+}
+.logo-2 img{
+  width: 100%;
+}
+.textbox {
+  width: 210px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.textbox input {
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 90%;
+  line-height: 37px;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+}
+
+.button {
+  width: 125px;
+  height: 30px;
+  background: #deb887;
+  border-radius: 10px;
+  margin: 14px auto;
+  display: block;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.b1 {
+  display: block;
+  width: 180px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-align: center;
+  color: #cd853f;
+  margin: auto;
+  transition: 0.6s all;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 16px;
+}
+
+.b2 {
+  display: block;
+  width: 180px;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #cd853f;
+  text-align: center;
+  margin: auto;
+  transition: 0.6s all;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 16px;
+}
+
+a:hover {
+  background:#deb887;
+}

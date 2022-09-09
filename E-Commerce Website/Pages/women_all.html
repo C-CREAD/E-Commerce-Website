@@ -1,0 +1,354 @@
+<?php
+session_start();
+
+    include("DA_connect.php");
+    include("function.php");
+
+    $uData = checkLogin($con);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women - D&A Clothing Official Website
+    </title>
+    <link rel="stylesheet" href="Women/women.css">
+</head>
+<body>
+<div class="header">
+    
+    <div class="container-1">
+        <a href="home.html" ><img class= "logo" src="images/Logo.PNG" alt="Logo"></a>
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search" value="">
+    </div>
+    <div class="account">
+        <p href="" id="account-button">Account</p>
+        <nav id="side-view">
+            <ul>
+                <li><a href="">My Account</a></li>
+                <li><a href="">Cart</a></li>
+                <li><a href="">Orders</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </nav>
+        <script>
+            var acc_Button = document.getElementById("account-button");
+            var side_View = document.getElementById("side-view");
+
+            side_View.style.right = "-250px";
+            acc_Button.onclick = function(){
+                if(side_View.style.right == "-250px"){
+                    side_View.style.right = "0px";
+                }
+                else{
+                    side_View.style.right = "-250px";
+                }
+            }
+        </script>
+    </div>
+</div>
+<div class="categories">
+
+    <div class="content-1">
+        <h1>All Products</h1>
+        <select>
+            <option>Defualt</option>
+            <option>Price</option>
+            <option>A-Z</option>
+        </select>
+        <div class="row">
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/bags_2.png" alt="Bag" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Cream Bag</h4></a>
+                <p>R250</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/bags_3.png" alt="Bag" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Black Bag</h4></a>
+                <p>R250</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/purse_1.PNG" alt="Bag" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Red Purse</h4></a>
+                <p>R450</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/purse_2.PNG" alt="Bag" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Purse</h4></a>
+                <p>R450</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/purse_3.PNG" alt="Bag" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Cream Purse</h4></a>
+                <p>R450</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/purse_4.PNG" alt="Bag" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Pink Purse</h4></a>
+                <p>R450</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/scarf_1.PNG" alt="Scarf" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Red Scarf</h4></a>
+                <p>R230</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/scarf_2.PNG" alt="Scarf" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Orange Scarf</h4></a>
+                <p>R230</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/scarf_3.PNG" alt="Scarf" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Silver+Grey Scarf</h4></a>
+                <p>R240</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/scarf_4.PNG" alt="Scarf" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Green Scarf</h4></a>
+                <p>R230</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/beanie_1.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Black Beanie</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/beanie_2.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Cream+Blue Beanie</h4></a>
+                <p>R250</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/beanie_3.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Red Beanie</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/beanie_4.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Orange Beanie</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/dress_1.PNG" alt="Dress" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Pink Dress</h4></a>
+                <p>R300</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/dress_2.PNG" alt="Dress" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Dress</h4></a>
+                <p>R300</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/dress_3.PNG" alt="Dress" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Green Dress</h4></a>
+                <p>R300</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/dress_4.PNG" alt="Dress" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Black Dress</h4></a>
+                <p>R300</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/skirt_1.PNG" alt="Skirt" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Jean Skirt</h4></a>
+                <p>R210</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/skirt_2.PNG" alt="Skirt" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Red+Blue+White Skirt</h4></a>
+                <p>R240</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/skirt_3.PNG" alt="Skirt" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Skirt</h4></a>
+                <p>R240</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/skirt_4.PNG" alt="Skirt" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>White Skirt</h4></a>
+                <p>R240</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/skirt_5.PNG" alt="Skirt" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Black Skirt</h4></a>
+                <p>R240</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/skirt_6.PNG" alt="Skirt" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Pink Skirt</h4></a>
+                <p>R240</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/jeans_3.PNG" alt="Jeans" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Jeans</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/jeans_2.PNG" alt="Jeans" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Light Blue Jeans</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/jeans_4.PNG" alt="Jeans" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Jean Shorts</h4></a>
+                <p>R180</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/jackets_3.PNG" alt="Jacket" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Purple Jacket</h4></a>
+                <p>R400</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/jackets_4.PNG" alt="Jacket" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Pink Jacket</h4></a>
+                <p>R400</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Pink Underwear</h4></a>
+                <p>R130</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_3.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Underwear</h4></a>
+                <p>R130</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_4.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Navy Blue Thong</h4></a>
+                <p>R160</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_5.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Light Blue Underwear</h4></a>
+                <p>R130</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_6.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Black Underwear</h4></a>
+                <p>R130</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_8.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Black Underwear (Set)</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_9.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Pink Underwear (Set)</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_10.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Purple Underwear (Set)</h4></a>
+                <p>R220</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/underware_11.PNG" alt="Underwear" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Rose Gold Underwear (Set)</h4></a>
+                <p>R230</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_1.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>D&A Unisesx Sneakers (Icon)</h4></a>
+                <p>R850</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_4.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Blue Converse Sneakers</h4></a>
+                <p>R750</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_9.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>White Converse Sneakers</h4></a>
+                <p>R790</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_12.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Pink Converse Sneakers</h4></a>
+                <p>R750</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_5.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Yellow Timberlands Boots</h4></a>
+                <p>R800</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_7.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Pink Trainers</h4></a>
+                <p>R700</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_13.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Red Leather Boots</h4></a>
+                <p>R650</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_13.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Red Leather High Heels</h4></a>
+                <p>R690</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Women/images_W/shoes_12.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Yellow Heels</h4></a>
+                <p>R450</p>
+            </div>
+        </div>
+        <div class="page-scroll">
+            <span>Prev</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>Next</span>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="column-3">
+                <h3>Download Our App</h3>
+                <div class="icon-app">
+                    <ul>
+                        <li><a href=""><img src="images/icon_app store.PNG" alt=""></a></li>
+                        <li><a href=""><img src="images/icon_play store.PNG" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-4">
+                <h3>Links</h3>
+                <ul>
+                    <li>Deals</li>
+                    <li>Blog Post</li>
+                    <li>FAQs</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="column-5">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

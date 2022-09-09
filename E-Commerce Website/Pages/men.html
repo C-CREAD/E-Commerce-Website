@@ -1,0 +1,155 @@
+<?php
+session_start();
+
+    include("DA_connect.php");
+    include("function.php");
+
+    $uData = checkLogin($con);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men - D&A Clothing Official Website
+    </title>
+    <link rel="stylesheet" href="Men/men.css">
+</head>
+<body>
+<div class="header">
+    
+    <div class="container-1">
+        <a href="home.html" ><img class= "logo" src="images/Logo.PNG" alt="Logo"></a>
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search" value="">
+    </div>
+    <div class="account">
+        <p href="" id="account-button">Account</p>
+        <nav id="side-view">
+            <ul>
+                <li><a href="">My Account</a></li>
+                <li><a href="">Cart</a></li>
+                <li><a href="">Orders</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </nav>
+        <script>
+            var acc_Button = document.getElementById("account-button");
+            var side_View = document.getElementById("side-view");
+
+            side_View.style.right = "-250px";
+            acc_Button.onclick = function(){
+                if(side_View.style.right == "-250px"){
+                    side_View.style.right = "0px";
+                }
+                else{
+                    side_View.style.right = "-250px";
+                }
+            }
+        </script>
+    </div>
+</div>
+<div class="categories">
+    <h1>Men</h1>
+    <div class="content-1">
+        <div class="row">
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/pexels-bryan-catota-3613005.jpg" alt="Shirts" style="width: 300px; height: 450px;"></a>
+                <a href="#" style="font-size: 24px;">Shirts</a>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/pexels-aviz-2383139.png" alt="Shorts" style="width: 300px; height:450px;"></a>
+                <a href="#" style="font-size: 24px;">Shorts</a>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/pexels-aviz-7092786.jpg" alt="Jackets" style="width: 300px; height:450px;"></a>
+                <a  href="#" style="font-size: 24px;">Jackets</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="categories"> -->
+    <div class="content-1">
+        <div class="row">
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/pexels-marlene-leppänen-1183266.jpg" alt="Hoodies" style="width: 300px; height: 450px;"></a>
+                <a href="#" style="font-size: 24px;">Hoodies</a>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/pexels-anna-pou-8133353.jpg" alt="Headwear" style="width: 300px; height:450px;"></a>
+                <a href="#" style="font-size: 24px;">Headwear</a>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/pexels-vincent-b-11000101.jpg" alt="Tracksuits" style="width: 300px; height:450px;"></a>
+                <a href="#" style="font-size: 24px;">Tracksuits</a>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/underwear.PNG" alt="Underwear" style="width: 300px; height: 450px;"></a>
+                <a href="#" style="font-size: 24px;">Underwear</a>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+<!-- <div class="categories"> -->
+    <div class="content-1">
+        <div class="row">
+            <div class="columns-2_1">
+                <a href=""><img src="Men/images_M/socks.PNG" alt="Socks" style="width: 450px; height: 300px;"></a>
+                <a href="#" style="font-size: 24px;">Socks</a>
+            </div>
+            <div class="columns-2_1">
+                <a href=""><img src="Men/images_M/pexels-ray-piedra-1478442.jpg" alt="Shoes" style="width: 450px; height:300px;"></a>
+                <a href="#" style="font-size: 24px;">Shoes</a>
+            </div>
+        </div>
+    </div>
+    <a href="men_all.html" class="button" style="margin-left: 45%;">All Products</a>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="column-3">
+                <h3>Download Our App</h3>
+                <div class="icon-app">
+                    <ul>
+                        <li><a href=""><img src="images_M/icon_app store.PNG" alt=""></a></li>
+                        <li><a href=""><img src="images_M/icon_play store.PNG" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-4">
+                <h3>Links</h3>
+                <ul>
+                    <li>Deals</li>
+                    <li>Blog Post</li>
+                    <li>FAQs</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="column-5">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

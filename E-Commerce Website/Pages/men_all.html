@@ -1,0 +1,278 @@
+<?php
+session_start();
+
+    include("DA_connect.php");
+    include("function.php");
+
+    $uData = checkLogin($con);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men - D&A Clothing Official Website
+    </title>
+    <link rel="stylesheet" href="Men/men.css">
+</head>
+<body>
+<div class="header">
+    
+    <div class="container-1">
+        <a href="home.html" ><img class= "logo" src="images/Logo.PNG" alt="Logo"></a>
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search" value="">
+    </div>
+    <div class="account">
+        <p href="" id="account-button">Account</p>
+        <nav id="side-view">
+            <ul>
+                <li><a href="">My Account</a></li>
+                <li><a href="">Cart</a></li>
+                <li><a href="">Orders</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </nav>
+        <script>
+            var acc_Button = document.getElementById("account-button");
+            var side_View = document.getElementById("side-view");
+
+            side_View.style.right = "-250px";
+            acc_Button.onclick = function(){
+                if(side_View.style.right == "-250px"){
+                    side_View.style.right = "0px";
+                }
+                else{
+                    side_View.style.right = "-250px";
+                }
+            }
+        </script>
+    </div>
+</div>
+<div class="categories">
+    <div class="content-1">
+        <h1>All Products</h1>
+        <select>
+            <option>Defualt</option>
+            <option>Price</option>
+            <option>A-Z</option>
+        </select>
+        <div class="row">
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shirts_1.png" alt="Shirts" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>White Tee</h4></a>
+                <p>R150</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shirts_2.png" alt="Shirts" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Black Tee</h4></a>
+                <p>R150</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shirts_3.png" alt="Shirts" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Red Tee</h4></a>
+                <p>R150</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shirts_4.png" alt="Shirts" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Yellow Tee</h4></a>
+                <p>R150</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shirts_5.png" alt="Shirts" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Green Tee</h4></a>
+                <p>R150</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shirts_6.png" alt="Shirts" style="width: 200px; height: 200px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Tee</h4></a>
+                <p>R150</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shorts_1.PNG" alt="Shorts" style="width: 300px; height:300px; font-size: 13px;"></a>
+                <a href="#" style="font-size: 24px;"><h4>Blue Shorts</h4></a>
+                <p>R170</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/jackets_1.PNG" alt="Jackets" style="width: 300px; height:200px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Black+Red Jacket</h4></a>
+                <p>R500</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/jackets_2.PNG" alt="Jackets" style="width: 300px; height:300px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Red Jacket</h4></a>
+                <p>R450</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/jackets_5.PNG" alt="Jackets" style="width: 200; height:300px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Grey+Green Jacket</h4></a>
+                <p>R500</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/hoodies_2.PNG" alt="Hoodies" style="width: 200px; height:250px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>White Hoodie</h4></a>
+                <p>R450</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/hoodies_3.PNG" alt="Hoodies" style="width: 200px; height:250px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Black Hoodie</h4></a>
+                <p>R450</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/hoodies_4.PNG" alt="Hoodies" style="width: 200px; height:250px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Yellow Hoodie</h4></a>
+                <p>R400</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/hoodies_5.PNG" alt="Hoodies" style="width: 200px; height: 250px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Blue Hoodie</h4></a>
+                <p>R400</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/beanie_1.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Black Beanie</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/beanie_2.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Cream+Blue Beanie</h4></a>
+                <p>R250</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/beanie_3.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Red Beanie</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/beanie_4.PNG" alt="Beanie" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Orange Beanie</h4></a>
+                <p>R200</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/underware_12.png" alt="Underwear" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Blue Boxers</h4></a>
+                <p>R80</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/underware_13.png" alt="Underwear" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Blue+Grey Boxers</h4></a>
+                <p>R80</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/underware_14.png" alt="Underwear" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Black Boxers</h4></a>
+                <p>R80</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/underware_15.png" alt="Underwear" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Grey+White Boxers</h4></a>
+                <p>R80</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/underware_16.png" alt="Underwear" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>White+Red Boxers</h4></a>
+                <p>R80</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/underware_17.png" alt="Underwear" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Silver Boxers</h4></a>
+                <p>R80</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/socks_1.PNG" alt="Socks" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>White+Grey+Black Sock Bundle </h4></a>
+                <p>R80</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/socks.PNG" alt="Socks" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Premium Sock Bundle</h4></a>
+                <p>R250</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shoes_2.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>D&A Yellow Sneakers</h4></a>
+                <p>R650</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shoes_3.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Green+Blue Trainers</h4></a>
+                <p>R850</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shoes_6.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Brown Leather Shoes</h4></a>
+                <p>R950</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shoes_8.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Black+Grey Trainers</h4></a>
+                <p>R850</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shoes_10.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Black Leather Shoes</h4></a>
+                <p>R700</p>
+            </div>
+            <div class="columns-2">
+                <a href=""><img src="Men/images_M/shoes_11.PNG" alt="Shoes" style="width: 200px; height: 150px; font-size: 13px;"></a>
+                <a  href="#" style="font-size: 24px;"><h4>Blue Casual Sneakers</h4></a>
+                <p>R550</p>
+            </div>
+        </div>
+        <div class="page-scroll">
+            <span>Prev</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>Next</span>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="column-3">
+                <h3>Download Our App</h3>
+                <div class="icon-app">
+                    <ul>
+                        <li><a href=""><img src="images/icon_app store.PNG" alt=""></a></li>
+                        <li><a href=""><img src="images/icon_play store.PNG" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-4">
+                <h3>Links</h3>
+                <ul>
+                    <li>Deals</li>
+                    <li>Blog Post</li>
+                    <li>FAQs</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="column-5">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
